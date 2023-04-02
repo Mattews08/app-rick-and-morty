@@ -1,8 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este repositório contém uma aplicação web criada com React que exibe informações sobre a série de TV "Rick and Morty". A aplicação faz uso da API pública do Rick and Morty para obter informações sobre os personagens, episódios e locais da série.
 
-## Getting Started
+## Aqui está uma visão geral das funcionalidades da aplicação
 
-First, run the development server:
+A página inicial exibe uma lista de personagens, que pode ser filtrada por nome e espécie, além de ordenada por nome ou data de criação.
+
+Cada personagem na lista pode ser clicado para exibir informações mais detalhadas, incluindo a imagem do personagem, seu status, espécie, gênero, localização e origem.
+
+
+A aplicação também exibe uma lista de episódios e locais da série, com informações detalhadas para cada um.
+
+Os usuários podem filtar personagem de acordo com os parametros no header.
+
+A aplicação é responsiva e se adapta a diferentes tamanhos de tela.
+
+Este repositório contém uma aplicação web criada com React que exibe informações sobre a série de TV "Rick and Morty". A aplicação faz uso da API pública do Rick and Morty para obter informações sobre os personagens, episódios e locais da série.
+
+
+## Aqui estão algumas tecnologias utilizadas na construção da aplicação:
+
+React: Uma biblioteca JavaScript para construir interfaces de usuário.
+
+TypeScript: Uma linguagem de programação que adiciona tipagem estática ao JavaScript.
+
+Styled Components: Uma biblioteca para escrever estilos em JavaScript para componentes React.
+
+Axios: Uma biblioteca para fazer requisições HTTP.
+
+React Icons: Uma biblioteca de ícones para o React.
+
+## Instalação
+
+Para instalar e executar a aplicação do repositório https://github.com/Mattews08/app-rick-and-morty, siga os seguintes passos:
+
+Clone o repositório para o seu computador usando o Git ou baixe-o como um arquivo ZIP e extraia-o.
+
+Abra um terminal na pasta do projeto.
+
+Execute o seguinte comando para instalar as dependências do projeto:
 
 ```bash
 npm run dev
@@ -11,28 +45,16 @@ yarn dev
 # or
 pnpm dev
 ```
+Depois que as dependências forem instaladas, execute o seguinte comando para iniciar a aplicação:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run dev
+# or
+yarn run dev
+# or
+pnpm dev
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Abra um navegador da web e acesse a seguinte URL:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Clique aqui para acessar a aplicação: [Rick and Morty App](http://localhost:3000)
