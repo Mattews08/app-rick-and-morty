@@ -7,12 +7,15 @@ export const Container = styled.div`
     url("/img/bg.jpg");
   background-size: contain;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 export const Content = styled.div`
   flex: 1;
   overflow-y: hidden;
-  padding: 3rem 20rem;
+  /* padding: 3rem 20rem; */
 `;
 
 export const Wrapper = styled.div`

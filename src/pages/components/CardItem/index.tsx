@@ -9,9 +9,9 @@ const CardItem = (props: Character) => {
       <S.TypeSpecies>{props.species}</S.TypeSpecies>
       <S.Name>{props.name}</S.Name>
       <S.ButtonContainer>
-        <S.View>Detalhes</S.View>
+        <S.View onClick={props.link}>Detalhes</S.View>
         <S.View>
-          <AiFillHeart data-testid="heart-icon" />
+          <AiFillHeart data-testid="heart-icon" color="red" size={16} />
         </S.View>
       </S.ButtonContainer>
     </S.CartContainer>

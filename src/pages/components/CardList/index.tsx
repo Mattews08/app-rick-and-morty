@@ -1,7 +1,9 @@
-import { CharacterListProps } from "@/types";
+import Pagination from "../Pagination";
+import { useEffect, useState } from "react";
+import { Character, CharacterListProps } from "@/types";
 import * as S from "./styles";
 import CartItem from "../CardItem";
-import Pagination from "../Pagination";
+import CharacterModal from "../Modal";
 
 const CardList: React.FC<CharacterListProps> = ({
   characters,
@@ -9,13 +11,32 @@ const CardList: React.FC<CharacterListProps> = ({
   totalPages,
   onPageChange,
 }) => {
-  const pagesToShow = 5;
-
-  const lastPage = Math.min(
-    totalPages,
-    currentPage + Math.floor(pagesToShow / 2)
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(
+    null
   );
-  const firstPage = Math.max(1, lastPage - pagesToShow + 1);
+
+  // const [favorites, setFavorites] = useState<Character[]>([]);
+
+  const handleCharacterClick = (character: Character) => {
+    setSelectedCharacter(character);
+  };
+
+  const handleModalClose = () => {
+    setSelectedCharacter(null);
+  };
+
+  // useEffect(() => {
+  //   const favoriteCharacters = localStorage.getItem("favoriteCharacters");
+  //   const parsedFavorites = favoriteCharacters ? JSON.parse(favoriteCharacters) : [];
+  //   setFavorites(parsedFavorites);
+  // }, []);
+
+  // const handleAddFavorite = (character: Character) => {
+  //   const updatedFavorites = [...favorites, character];
+  //   setFavorites(updatedFavorites);
+  //   localStorage.setItem("favoriteCharacters", JSON.stringify(updatedFavorites));
+  // };
+
   return (
     <S.Container>
       <S.ContentList>
@@ -27,6 +48,9 @@ const CardList: React.FC<CharacterListProps> = ({
             image={character.image}
             species={character.species}
             status={character.status}
+            link={() => handleCharacterClick(character)}
+            // isFavorite={favorites.some((c) => c.id === character.id)}
+            // onAddFavorite={handleAddFavorite}
           />
         ))}
       </S.ContentList>
@@ -35,6 +59,12 @@ const CardList: React.FC<CharacterListProps> = ({
         totalPages={totalPages}
         onPageChange={onPageChange}
       />
+      {selectedCharacter && (
+        <CharacterModal
+          character={selectedCharacter}
+          onClose={handleModalClose}
+        />
+      )}
     </S.Container>
   );
 };

@@ -41,14 +41,14 @@ export const ButtonContainer = styled.div`
 `;
 
 export const View = styled.button`
-  padding: 0.5rem;
+  padding: 0.3rem 0.8rem;
   width: 100%;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   border-radius: 10px;
   border: none;
   align-items: center;
   color: #111827;
-  background: #4ade80;
+  background: #e9e9e9;
   cursor: pointer;
 `;

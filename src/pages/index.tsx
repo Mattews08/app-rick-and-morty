@@ -19,9 +19,11 @@ export const getStaticProps: GetStaticProps<CharactersProps> = async () => {
     props: {
       characters: data.results,
       totalPages: data.info.pages,
+
     },
   };
 };
+
 
 const Home: NextPage<CharactersProps> = ({ characters: initialCharacters, totalPages }) => {
   const [characters, setCharacters] = useState(initialCharacters);
@@ -31,10 +33,8 @@ const Home: NextPage<CharactersProps> = ({ characters: initialCharacters, totalP
   const [status, setStatus] = useState("");
 
   const handlePageChange = async (pageNumber: number) => {
-    console.log('Changing to page', pageNumber);
     const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${pageNumber}`);
     const data = await response.json();
-    console.log('Data for page', pageNumber, ':', data);
     setCharacters((prevCharacters) => [...prevCharacters, ...data.results]);
     setCurrentPage(pageNumber);
   };
@@ -63,18 +63,12 @@ const Home: NextPage<CharactersProps> = ({ characters: initialCharacters, totalP
     fetchFilteredCharacters();
   }, [gender, species, status]);
 
-  const items = [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/about" },
-    { label: "Contact", link: "/contact" },
-  ];
+
 
   return (
     <Wrapper>
       <Container>
       <Head>App Ryck and Morty</Head>
-      {/* <Header title="My Website" items={items} />
-      <h1>Personagens de Rick and Morty</h1> */}
      <Content>
      <CharacterFilters onFilterChange={handleFilterChange} />
      <CardList
