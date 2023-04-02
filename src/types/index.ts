@@ -13,8 +13,6 @@ export interface Character {
     name: string;
     url: string;
   };
-  // isFavorite?: boolean;
-  // onAddFavorite?: (character: any) => void;
 }
 
 export interface CharacterListProps {
@@ -22,6 +20,8 @@ export interface CharacterListProps {
   currentPage: number;
   totalPages: number;
   onPageChange: (pageNumber: number) => void;
+  // onToggleFavorite?: (character: Character) => void;
+  // isFavorite?: boolean;
 }
 
 export interface CharactersProps {

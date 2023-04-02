@@ -1,13 +1,11 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import axios from "axios";
 import { GetStaticProps } from "next";
-import Header from "./components/Header";
-import { Character, CharactersProps } from "@/types";
-import CardList from "./components/CardList";
+import {  CharactersProps } from "@/types";
 import { useEffect, useState } from "react";
 import { Container, Content, Wrapper } from "@/styles/pages/Home";
-import CharacterFilters from "./components/FiltersItems";
+import CharacterFilters from "@/components/FiltersItems";
+import CardList from "@/components/CardList";
 
 const PAGE_SIZE = 20;
 
