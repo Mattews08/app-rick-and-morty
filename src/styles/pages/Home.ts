@@ -1,25 +1,23 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/img/bg.jpg");
+  background-size: contain;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+`;
+
+export const Content = styled.div`
+  flex: 1;
+  overflow-y: hidden;
+  padding: 3rem 20rem;
+`;
+
+export const Wrapper = styled.div`
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  h1 {
-    font-size: 54px;
-    color: ${props => props.theme.colors.primary};
-    margin-top: 40px;
-  }
-  p {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  ul {
-    display: flex;
-    gap: 2rem;
-    flex-direction: row;
-  }
-`
+  overflow-x: hidden !important;
+`;
